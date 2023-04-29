@@ -16,7 +16,7 @@ const {
    const protect = require("../middlewars/auth");
 
 
-//http://localhost:8000/api/v1
+//http://localhost:6000/api/v1
 
 
 
