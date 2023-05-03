@@ -236,7 +236,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
     await token.deleteOne();
   }
 
-  // Create Reste Token
+  // Create Reset Token
   let resetToken = crypto.randomBytes(32).toString("hex") + user._id;
   console.log("========>",resetToken);
   // res.send("Forgot password")
@@ -248,7 +248,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
     .digest("hex");
 
     console.log("+++++++++++++",hashedToken);
-    // res.send("Forgot password updated")
+    res.send("Forgot password updated")
 
   // Save Token to DB
   await new Token({
